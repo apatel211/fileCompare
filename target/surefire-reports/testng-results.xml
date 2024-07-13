@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-07-13T14:23:27 EDT" name="CSVComparisonSuite" finished-at="2024-07-13T14:23:27 EDT" duration-ms="63">
+    <groups>
+    </groups>
+    <test started-at="2024-07-13T14:23:27 EDT" name="CSVComparisonTest" finished-at="2024-07-13T14:23:27 EDT" duration-ms="63">
+      <class name="CSVComparisonTest">
+        <test-method signature="testCsvComparison()[pri:0, instance:CSVComparisonTest@3ec300f1]" started-at="2024-07-13T14:23:27 EDT" name="testCsvComparison" finished-at="2024-07-13T14:23:27 EDT" duration-ms="21" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCsvComparison -->
+      </class> <!-- CSVComparisonTest -->
+    </test> <!-- CSVComparisonTest -->
+  </suite> <!-- CSVComparisonSuite -->
+</testng-results>
