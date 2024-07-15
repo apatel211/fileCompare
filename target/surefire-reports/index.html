@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-CSVComparisonSuite" class="navigator-link">
-              <span class="suite-name border-passed">CSVComparisonSuite</span>
+              <span class="suite-name border-failed">CSVComparisonSuite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,21 +92,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">1 method, 1 failed,   </span>
                   </li>
                   <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-CSVComparisonSuite" class="hide-methods passed suite-CSVComparisonSuite"> (hide)</a> <!-- hide-methods passed suite-CSVComparisonSuite -->
-                      <a href="#" panel-name="suite-CSVComparisonSuite" class="show-methods passed suite-CSVComparisonSuite"> (show)</a> <!-- show-methods passed suite-CSVComparisonSuite -->
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-CSVComparisonSuite" class="hide-methods failed suite-CSVComparisonSuite"> (hide)</a> <!-- hide-methods failed suite-CSVComparisonSuite -->
+                      <a href="#" panel-name="suite-CSVComparisonSuite" class="show-methods failed suite-CSVComparisonSuite"> (show)</a> <!-- show-methods failed suite-CSVComparisonSuite -->
                     </span>
-                    <div class="method-list-content passed suite-CSVComparisonSuite">
+                    <div class="method-list-content failed suite-CSVComparisonSuite">
                       <span>
-                        <img src="passed.png" width="3%"/>
+                        <img src="failed.png" width="3%"/>
                         <a href="#" panel-name="suite-CSVComparisonSuite" title="CSVComparisonTest" class="method navigator-link" hash-for-method="testCsvComparison">testCsvComparison</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content passed suite-CSVComparisonSuite -->
+                    </div> <!-- method-list-content failed suite-CSVComparisonSuite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -118,9 +118,9 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-CSVComparisonSuite" class="panel CSVComparisonSuite">
-          <div class="suite-CSVComparisonSuite-class-passed">
+          <div class="suite-CSVComparisonSuite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
+              <img src="failed.png"/>
               <span class="class-name">CSVComparisonTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -129,10 +129,15 @@
                   <a name="testCsvComparison">
                   </a> <!-- testCsvComparison -->
                   <span class="method-name">testCsvComparison</span>
+                  <div class="stack-trace">java.lang.AssertionError: Files should be identical, but differences were found: [Row 4 is missing in file1, Row 5 is missing in file1] expected [true] but found [false]
+	at CSVComparisonTest.testCsvComparison(CSVComparisonTest.java:23)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 34 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-CSVComparisonSuite-class-passed -->
+          </div> <!-- suite-CSVComparisonSuite-class-failed -->
         </div> <!-- panel CSVComparisonSuite -->
         <div panel-name="test-xml-CSVComparisonSuite" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -189,12 +194,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'testCsvComparison')
 data.setCell(0, 2, 'CSVComparisonTest')
-data.setCell(0, 3, 21);
+data.setCell(0, 3, 30);
 window.suiteTableData['CSVComparisonSuite']= { tableData: data, tableDiv: 'times-div-CSVComparisonSuite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 21 ms</span>
+              <span class="suite-total-time">Total running time: 30 ms</span>
               <div id="times-div-CSVComparisonSuite">
               </div> <!-- times-div-CSVComparisonSuite -->
             </div> <!-- times-div -->
@@ -222,6 +227,8 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">CSVComparisonTest</div> <!-- chronological-class-name -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">testCsvComparison</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
