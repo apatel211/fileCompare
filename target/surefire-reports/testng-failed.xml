@@ -5,7 +5,7 @@
     <classes>
       <class name="CSVComparisonTest">
         <methods>
-          <include name="testCsvComparison"/>
+          <include name="testCompareCSVFiles"/>
         </methods>
       </class> <!-- CSVComparisonTest -->
     </classes>

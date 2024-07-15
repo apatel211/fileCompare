@@ -103,7 +103,7 @@
                     <div class="method-list-content failed suite-CSVComparisonSuite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-CSVComparisonSuite" title="CSVComparisonTest" class="method navigator-link" hash-for-method="testCsvComparison">testCsvComparison</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-CSVComparisonSuite" title="CSVComparisonTest" class="method navigator-link" hash-for-method="testCompareCSVFiles">testCompareCSVFiles</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-CSVComparisonSuite -->
@@ -126,11 +126,12 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="testCsvComparison">
-                  </a> <!-- testCsvComparison -->
-                  <span class="method-name">testCsvComparison</span>
-                  <div class="stack-trace">java.lang.AssertionError: Files should be identical, but differences were found: [Row 4 is missing in file1, Row 5 is missing in file1] expected [true] but found [false]
-	at CSVComparisonTest.testCsvComparison(CSVComparisonTest.java:23)
+                  <a name="testCompareCSVFiles">
+                  </a> <!-- testCompareCSVFiles -->
+                  <span class="method-name">testCompareCSVFiles</span>
+                  <div class="stack-trace">java.lang.AssertionError: Differences found:
+Difference found at line 4, column &apos;name&apos;: File1 -&gt; thi, File2 -&gt; David expected [true] but found [false]
+	at CSVComparisonTest.testCompareCSVFiles(CSVComparisonTest.java:36)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 ... Removed 34 stack frames
 </div> <!-- stack-trace -->
@@ -141,7 +142,7 @@
         </div> <!-- panel CSVComparisonSuite -->
         <div panel-name="test-xml-CSVComparisonSuite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/Applications/web automation/veeva/testng.xml</span>
+            <span class="header-content">/Applications/web automation/FileCompareResult/testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -192,14 +193,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'testCsvComparison')
+data.setCell(0, 1, 'testCompareCSVFiles')
 data.setCell(0, 2, 'CSVComparisonTest')
-data.setCell(0, 3, 30);
+data.setCell(0, 3, 34);
 window.suiteTableData['CSVComparisonSuite']= { tableData: data, tableDiv: 'times-div-CSVComparisonSuite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 30 ms</span>
+              <span class="suite-total-time">Total running time: 34 ms</span>
               <div id="times-div-CSVComparisonSuite">
               </div> <!-- times-div-CSVComparisonSuite -->
             </div> <!-- times-div -->
@@ -229,7 +230,7 @@ return data;
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">testCsvComparison</span>
+                <span class="method-name">testCompareCSVFiles</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->

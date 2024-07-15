@@ -2,22 +2,24 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-07-15T12:36:04 EDT" name="CSVComparisonSuite" finished-at="2024-07-15T12:36:05 EDT" duration-ms="80">
+  <suite started-at="2024-07-15T12:59:42 EDT" name="CSVComparisonSuite" finished-at="2024-07-15T12:59:42 EDT" duration-ms="84">
     <groups>
     </groups>
-    <test started-at="2024-07-15T12:36:04 EDT" name="CSVComparisonTest" finished-at="2024-07-15T12:36:05 EDT" duration-ms="80">
+    <test started-at="2024-07-15T12:59:42 EDT" name="CSVComparisonTest" finished-at="2024-07-15T12:59:42 EDT" duration-ms="84">
       <class name="CSVComparisonTest">
-        <test-method signature="testCsvComparison()[pri:0, instance:CSVComparisonTest@3ec300f1]" started-at="2024-07-15T12:36:04 EDT" name="testCsvComparison" finished-at="2024-07-15T12:36:05 EDT" duration-ms="30" status="FAIL">
+        <test-method signature="testCompareCSVFiles()[pri:0, instance:CSVComparisonTest@3d680b5a]" started-at="2024-07-15T12:59:42 EDT" name="testCompareCSVFiles" finished-at="2024-07-15T12:59:42 EDT" duration-ms="34" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[Files should be identical, but differences were found: [Row 4 is missing in file1, Row 5 is missing in file1] expected [true] but found [false]]]>
+              <![CDATA[Differences found:
+Difference found at line 4, column 'name': File1 -> thi, File2 -> David expected [true] but found [false]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Files should be identical, but differences were found: [Row 4 is missing in file1, Row 5 is missing in file1] expected [true] but found [false]
+              <![CDATA[java.lang.AssertionError: Differences found:
+Difference found at line 4, column 'name': File1 -> thi, File2 -> David expected [true] but found [false]
 at org.testng.Assert.fail(Assert.java:111)
 at org.testng.Assert.failNotEquals(Assert.java:1578)
 at org.testng.Assert.assertTrue(Assert.java:57)
-at CSVComparisonTest.testCsvComparison(CSVComparisonTest.java:23)
+at CSVComparisonTest.testCompareCSVFiles(CSVComparisonTest.java:36)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -55,7 +57,7 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testCsvComparison -->
+        </test-method> <!-- testCompareCSVFiles -->
       </class> <!-- CSVComparisonTest -->
     </test> <!-- CSVComparisonTest -->
   </suite> <!-- CSVComparisonSuite -->
